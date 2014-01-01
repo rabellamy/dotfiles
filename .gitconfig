@@ -1,0 +1,41 @@
+[user]
+	name = Robert Anthony Bellamy
+	email = rabellamy@gmail.com
+
+[core]
+	excludesfile = ~/.gitignore
+  editor = sublime-text -wl1
+
+[branch]
+  autosetuprebase = always
+
+[color]
+	ui = true
+  status = auto
+  branch = auto
+  interactive = auto
+
+[color "decorate"]
+  HEAD = cyan
+  remoteBranch = red bold
+  stash = yellow
+  tag = blue bold
+
+[alias]
+	s = status
+	l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --date=relative --all
+  h = log --pretty=format:\"%C(cyan)%h %C(green)%ad%Creset | %s %C(yellow)%d %C(magenta)[%an]\" --graph --date=short
+	latest = for-each-ref --sort=-committerdate --format='%(committerdate:short) %(refname:short) [%(committername)]'
+  g = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
+	d = diff
+	b = branch
+	ba = branch -av
+	a = add
+	aa = add .
+	c = commit -m
+	ca = commit -am
+	ch = checkout
+	chb = checkout -b
+
+
+
