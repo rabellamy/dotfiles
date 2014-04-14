@@ -4,7 +4,7 @@
 
 [core]
 	excludesfile = ~/.gitignore
-  editor = sublime-text -wl1
+	editor = vim
 
 [branch]
   autosetuprebase = always
@@ -28,6 +28,7 @@
 	latest = for-each-ref --sort=-committerdate --format='%(committerdate:short) %(refname:short) [%(committername)]'
   g = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
 	d = diff
+  dw = diff --word-diff
 	b = branch
 	ba = branch -av
 	a = add
@@ -36,6 +37,7 @@
 	ca = commit -am
 	ch = checkout
 	chb = checkout -b
+  fa = fetch --all
 
 
 
