@@ -45,7 +45,7 @@ DISABLE_AUTO_TITLE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(git composer)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -67,9 +67,9 @@ export PATH="/usr/local/bin:/usr/local/share/npm/bin:/usr/local/sbin:/usr/bin:/b
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-#####################################################################################################################################################
-#                                                                  Shell
-#####################################################################################################################################################
+###################################################################################################################
+#                                                       Shell
+###################################################################################################################
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
@@ -86,8 +86,6 @@ alias mg='mget'
 alias rm='rm -i'
 alias mv='mv -i'
 alias cp='cp -i'
-
-alias c='clear'
 
 alias mkdir='mkdir -pv'
 alias t='touch'
@@ -127,5 +125,9 @@ export EDITOR='sublime-text -w'
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 [ -z "$TMUX" ] && export TERM=xterm-256color
 
+alias "composer"="php ~/.composer/composer.phar"
+
 #tmuxinator
 source ~/.bin/tmuxinator.zsh
+
+eval "$(rbenv init -)"
