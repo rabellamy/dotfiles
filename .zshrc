@@ -124,10 +124,14 @@ alias tm="tmux"
 export EDITOR='sublime-text -w'
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 [ -z "$TMUX" ] && export TERM=xterm-256color
-
-alias "composer"="php ~/.composer/composer.phar"
+alias tls="tmux list-sessions"
+alias tks="tmux kill-session -t"
+alias tlw="tmux list-windows"
 
 #tmuxinator
 source ~/.bin/tmuxinator.zsh
+
+#composer
+alias "composer"="php ~/.composer/composer.phar"
 
 eval "$(rbenv init -)"
