@@ -7,3 +7,4 @@ export PATH=/usr/local/php5/bin:$PATH
 source ~/.profile
 
 export PATH=$PATH:/Applications/acquia-drupal/drush
+export PATH="$HOME/.rbenv/bin:$PATH"
