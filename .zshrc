@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="gnzh"
+ZSH_THEME="agnoster"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -13,6 +13,8 @@ ZSH_THEME="gnzh"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
+
+DEFAULT_USER="rabellamy"
 
 # Uncomment this to disable bi-weekly auto-update checks
 DISABLE_AUTO_UPDATE="true"
@@ -117,7 +119,7 @@ alias sz="source ~/.zshrc"
 alias sub="sublime-text"
 
 #weechat
-alias wc="weechat-curses"
+#alias wc="weechat-curses"
 
 #tmux
 alias tm="tmux"
@@ -134,4 +136,5 @@ source ~/.bin/tmuxinator.zsh
 #composer
 alias "composer"="php ~/.composer/composer.phar"
 
+#rbenv
 eval "$(rbenv init -)"
