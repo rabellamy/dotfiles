@@ -124,7 +124,6 @@ alias sub="sublime-text"
 #tmux
 alias tm="tmux"
 export EDITOR='sublime-text -w'
-[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 [ -z "$TMUX" ] && export TERM=xterm-256color
 alias tls="tmux list-sessions"
 alias tks="tmux kill-session -t"
@@ -132,6 +131,7 @@ alias tlw="tmux list-windows"
 
 #tmuxinator
 source ~/.bin/tmuxinator.zsh
+[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 
 #composer
 alias "composer"="php ~/.composer/composer.phar"
