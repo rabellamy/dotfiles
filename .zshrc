@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="agnoster"
+ZSH_THEME="rabellamy"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -47,7 +47,7 @@ DISABLE_AUTO_TITLE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git composer)
+plugins=(composer berkshelf brew bundler git knife tmux tmuxinator vagrant)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -113,7 +113,6 @@ alias ps="ps aux"
 alias psg="ps aux | grep"
 
 alias g="sudo grep -Ri"
-alias count="l | grep -c"
 
 alias sz="source ~/.zshrc"
 alias sub="sublime-text"
@@ -122,19 +121,24 @@ alias sub="sublime-text"
 #alias wc="weechat-curses"
 
 #tmux
-alias tm="tmux"
 export EDITOR='sublime-text -w'
 [ -z "$TMUX" ] && export TERM=xterm-256color
 alias tls="tmux list-sessions"
 alias tks="tmux kill-session -t"
 alias tlw="tmux list-windows"
 
+
 #tmuxinator
 source ~/.bin/tmuxinator.zsh
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
+export DISABLE_AUTO_TITLE=true
+
 
 #composer
 alias "composer"="php ~/.composer/composer.phar"
 
 #rbenv
-eval "$(rbenv init -)"
+#eval "$(rbenv init -)"
+
+
+

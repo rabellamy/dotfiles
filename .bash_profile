@@ -15,6 +15,6 @@ export PATH=$PATH:/usr/local/go/bin
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 
-
+eval "$(rbenv init -)"
 
 
