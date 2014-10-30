@@ -29,10 +29,12 @@
   g = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
 	d = diff
   dw = diff --word-diff
+  dc = diff --cached
 	b = branch
 	ba = branch -av
 	a = add
 	aa = add .
+  ap = add -p
 	c = commit -m
 	ca = commit -am
 	ch = checkout
