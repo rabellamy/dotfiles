@@ -24,7 +24,7 @@
 [alias]
 	s = status
 	l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --date=relative --all
-  h = log --pretty=format:\"%C(cyan)%h %C(green)%ad%Creset | %s %C(yellow)%d %C(magenta)[%an]\" --graph --date=short
+  h = log --pretty=format:\"%C(cyan)%h %C(green)%ad%Creset | %s %C(yellow)%d %C(magenta)[%an]\" --graph --date=short --author='Robert Anthony Bellamy'
 	latest = for-each-ref --sort=-committerdate --format='%(committerdate:short) %(refname:short) [%(committername)]'
   g = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
 	d = diff

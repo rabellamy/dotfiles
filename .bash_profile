@@ -18,3 +18,10 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+eval "$(pyenv-virtualenv-auto init)"
+export PATH="$PATH:$HOME/.ndenv/bin"
+eval "$(ndenv init -)"
