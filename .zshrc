@@ -53,9 +53,6 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/local/share/npm/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/mysql/bin:/usr/local/sbin:/usr/local/git/bin:/Applications/acquia-drupal/drush"
-# export MANPATH="/usr/local/man:$MANPATH"
-
 # # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
@@ -78,21 +75,14 @@ alias ....="cd ../../.."
 
 alias agi="sudo apt-get install"
 
-#get and put
-alias wp='wput'
-alias wg='wget'
-alias mp='mput'
-alias mg='mget'
-
 # Make some possibly destructive commands more interactive.
 alias rm='rm -i'
 alias mv='mv -i'
 alias cp='cp -i'
 
 alias mkdir='mkdir -pv'
-alias t='touch'
 
-#list
+# list
 alias l='ls -1' # Display One File Per Line
 alias la='ls -lhAF' # Display file size in human readable format. Display Hidden Files
 alias ll='ls -lhF' # Display file size in human readable format. Don't Display Hidden Files
@@ -104,11 +94,9 @@ alias df='df -H'
 
 alias h='history'
 
-alias pt='ping www.google.com'
-
 alias update='sudo apt-get update && sudo apt-get upgrade'
 
-#processes
+# processes
 alias ps="ps aux"
 alias psg="ps aux | grep"
 
@@ -117,26 +105,14 @@ alias g="sudo grep -Ri"
 alias sz="source ~/.zshrc"
 alias sub="sublime-text"
 
-#weechat
-#alias wc="weechat-curses"
-
-#tmux
-export EDITOR='sublime-text -w'
+# tmux
+export EDITOR='atom'
 [ -z "$TMUX" ] && export TERM=xterm-256color
-alias tls="tmux list-sessions"
-alias tks="tmux kill-session -t"
-alias tlw="tmux list-windows"
-
-
-#tmuxinator
 source ~/.bin/tmuxinator.zsh
-[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
-export DISABLE_AUTO_TITLE=true
 
+# go
+export GOPATH=$HOME/Projects/Go
+PATH=$PATH:~/Projects/Go/bin
+export GOBIN=~/Projects/Go/bin
 
-#composer
-alias "composer"="php ~/.composer/composer.phar"
-
-#rbenv
-eval "$(rbenv init -)"
-export GEM_HOME=$(brew --prefix)
+alias sn="pmset sleepnow"
