@@ -41,5 +41,5 @@
 	chb = checkout -b
   fa = fetch --all
 
-
-
+[url "git@github.com:"]
+	insteadOf = https://github.com/

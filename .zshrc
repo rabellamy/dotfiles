@@ -111,7 +111,7 @@ export EDITOR='atom'
 source ~/.bin/tmuxinator.zsh
 
 # go
-export GOPATH=$HOME/Projects/Go
+export GOPATH=~/Projects/Go
 PATH=$PATH:~/Projects/Go/bin
 export GOBIN=~/Projects/Go/bin
 
