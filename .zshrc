@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="rabellamy"
+ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -108,11 +108,11 @@ alias sub="sublime-text"
 # tmux
 export EDITOR='atom'
 [ -z "$TMUX" ] && export TERM=xterm-256color
-source ~/.bin/tmuxinator.zsh
+# source ~/.bin/tmuxinator.zsh
 
 # go
-export GOPATH=~/Projects/Go
-PATH=$PATH:~/Projects/Go/bin
-export GOBIN=~/Projects/Go/bin
+export GOPATH=~/Go
+PATH=$PATH:~/Go/bin
+export GOBIN=~/Go/bin
 
 alias sn="pmset sleepnow"
