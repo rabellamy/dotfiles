@@ -1,6 +1,7 @@
 [user]
 	name = Robert Anthony Bellamy
 	email = rabellamy@gmail.com
+	signingkey = D0C7216ECF15A9E9
 
 [core]
 	excludesfile = ~/.gitignore

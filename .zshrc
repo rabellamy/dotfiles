@@ -94,16 +94,7 @@ alias df='df -H'
 
 alias h='history'
 
-alias update='sudo apt-get update && sudo apt-get upgrade'
-
-# processes
-alias ps="ps aux"
-alias psg="ps aux | grep"
-
-alias g="sudo grep -Ri"
-
 alias sz="source ~/.zshrc"
-alias sub="sublime-text"
 
 # tmux
 export EDITOR='atom'
@@ -111,8 +102,13 @@ export EDITOR='atom'
 # source ~/.bin/tmuxinator.zsh
 
 # go
-export GOPATH=~/Go
+export GOPATH=~/projects/Go
 PATH=$PATH:~/Go/bin
-export GOBIN=~/Go/bin
+export GOBIN=~/projects/Go/bin
 
 alias sn="pmset sleepnow"
+
+export PATH=~/.node/bin:$PATH
+
+eval "$(rig config)"
+export GPG_TTY=$(tty)
