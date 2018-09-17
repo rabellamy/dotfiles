@@ -83,10 +83,10 @@ alias cp='cp -i'
 alias mkdir='mkdir -pv'
 
 # list
-alias l='ls -1' # Display One File Per Line
-alias la='ls -lhAF' # Display file size in human readable format. Display Hidden Files
-alias ll='ls -lhF' # Display file size in human readable format. Don't Display Hidden Files
-alias lt="ls -lhFt" # Order files based on last modified time
+alias l='ls -1'       # Display One File Per Line
+alias la='ls -lhAF'   # Display file size in human readable format. Display Hidden Files
+alias ll='ls -lhF'    # Display file size in human readable format. Don't Display Hidden Files
+alias lt="ls -lhFt"   # Order files based on last modified time
 alias ltr="ls -lhFtr" # Order files based on last modified time in reverse order
 alias l.="ls -lhtrdF .*"
 
@@ -94,16 +94,20 @@ alias df='df -H'
 
 alias h='history'
 
+alias k='kubectl'
+
 alias sz="source ~/.zshrc"
 
+export EDITOR='vim'
+export KUBE_EDITOR='vim'
+
 # tmux
-export EDITOR='atom'
 [ -z "$TMUX" ] && export TERM=xterm-256color
 # source ~/.bin/tmuxinator.zsh
 
 # go
 export GOPATH=~/projects/Go
-PATH=$PATH:~/Go/bin
+PATH=$PATH:~/projects/Go/bin
 export GOBIN=~/projects/Go/bin
 
 alias sn="pmset sleepnow"
@@ -112,3 +116,23 @@ export PATH=~/.node/bin:$PATH
 
 eval "$(rig config)"
 export GPG_TTY=$(tty)
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+
+export ANDROID_HOME=~/Library/Android/sdk
+export PATH=${PATH}:${ANDROID_HOME}/tools
+export PATH=${PATH}:${ANDROID_HOME}/platform-tools
+
+export ANDROID_NDK=/Users/rbellamy/Library/Android/sdk/ndk-bundle
+export ANDROID_NDK_HOME=/Users/rbellamy/Library/Android/sdk/ndk-bundle
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/rbellamy/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/rbellamy/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/rbellamy/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/rbellamy/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+# export PATH="/usr/local/opt/go@1.9/bin:$PATH"
+export PATH="/usr/local/opt/m4/bin:$PATH"
+export PATH="/usr/local/opt/openssl/bin:$PATH"

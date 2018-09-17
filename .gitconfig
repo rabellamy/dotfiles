@@ -8,41 +8,45 @@
 	editor = vim
 
 [branch]
-  autosetuprebase = always
+	autosetuprebase = always
 
 [color]
 	ui = true
-  status = auto
-  branch = auto
-  interactive = auto
+	status = auto
+	branch = auto
+	interactive = auto
 
 [color "decorate"]
-  HEAD = cyan
-  remoteBranch = red bold
-  stash = yellow
-  tag = blue bold
+	HEAD = cyan
+	remoteBranch = red bold
+	stash = yellow
+	tag = blue bold
 
 [alias]
 	s = status
 	l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --date=relative --all
-  h = log --pretty=format:\"%C(cyan)%h %C(green)%ad%Creset | %s %C(yellow)%d %C(magenta)[%an]\" --graph --date=short --author='Robert Anthony Bellamy'
+	h = log --pretty=format:\"%C(cyan)%h %C(green)%ad%Creset | %s %C(yellow)%d %C(magenta)[%an]\" --graph --date=short --author='Robert Anthony Bellamy'
 	latest = for-each-ref --sort=-committerdate --format='%(committerdate:short) %(refname:short) [%(committername)]'
-  g = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
+	g = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
 	d = diff
-  dw = diff --word-diff
-  dc = diff --cached
+	dw = diff --word-diff
+	dc = diff --cached
 	b = branch
 	ba = branch -av
 	a = add
 	aa = add .
-  ap = add -p
+	ap = add -p
 	c = commit -m
 	ca = commit -am
 	ch = checkout
 	chb = checkout -b
-  fa = fetch --all
+	fa = fetch --all
 
 [url "git@github.com:"]
 	insteadOf = https://github.com/
+
 [commit]
 	gpgsign = true
+
+[http]
+	cookiefile = /Users/rbellamy/.gitcookies
