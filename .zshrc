@@ -44,12 +44,13 @@ DISABLE_AUTO_TITLE="true"
 # yyyy-mm-dd
 # HIST_STAMPS="mm/dd/yyyy"
 
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+source $ZSH/oh-my-zsh.sh
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(composer berkshelf brew bundler git knife tmux tmuxinator vagrant docker)
-
-source $ZSH/oh-my-zsh.sh
+plugins=(brew bundler git tmux tmuxinator docker)
 
 # User configuration
 
@@ -106,33 +107,20 @@ export KUBE_EDITOR='vim'
 # source ~/.bin/tmuxinator.zsh
 
 # go
-export GOPATH=~/projects/Go
-PATH=$PATH:~/projects/Go/bin
-export GOBIN=~/projects/Go/bin
+export GOPATH=~/Projects/Go
+PATH=$PATH:~/Projects/Go/bin
+export GOBIN=~/Projects/Go/bin
+# export GO111MODULE=on
 
 alias sn="pmset sleepnow"
 
-export PATH=~/.node/bin:$PATH
-
-eval "$(rig config)"
 export GPG_TTY=$(tty)
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
-
-export ANDROID_HOME=~/Library/Android/sdk
-export PATH=${PATH}:${ANDROID_HOME}/tools
-export PATH=${PATH}:${ANDROID_HOME}/platform-tools
-
-export ANDROID_NDK=/Users/rbellamy/Library/Android/sdk/ndk-bundle
-export ANDROID_NDK_HOME=/Users/rbellamy/Library/Android/sdk/ndk-bundle
-
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/rbellamy/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/rbellamy/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/Users/robertbellamy/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/robertbellamy/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/rbellamy/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/rbellamy/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
-# export PATH="/usr/local/opt/go@1.9/bin:$PATH"
-export PATH="/usr/local/opt/m4/bin:$PATH"
-export PATH="/usr/local/opt/openssl/bin:$PATH"
+if [ -f '/Users/robertbellamy/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/robertbellamy/google-cloud-sdk/completion.zsh.inc'; fi
+export PATH="/usr/local/opt/scala@2.11/bin:$PATH"
+
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_211.jdk/Contents/Home
